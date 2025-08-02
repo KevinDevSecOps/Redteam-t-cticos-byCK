@@ -40,6 +40,15 @@ Repositorio colaborativo de **tácticas, técnicas y procedimientos (TTPs)** bas
 | **AMSI Bypass**       | T1562.001            | AMSI.fail, PowerShell ofuscación      | [Ver ejemplo](Defense-Evasion/AMSI-Bypass.md) |
 
 ---
+## 🗺️ Mapa de Técnicas (MITRE ATT&CK)
+| Táctica              | Técnicas                              | Ejemplo                          |
+|----------------------|---------------------------------------|----------------------------------|
+| **Initial Access**   | Phishing (T1566)                      | [Ver](Initial-Access/Phishing.md)|
+| **Defense Evasion**  | AMSI Bypass (T1562.001)               | [Ver](Defense-Evasion/AMSI-Bypass.md) |
+
+## 🚀 Cómo Contribuir
+1. Edita los archivos `.md` existentes o añade nuevos.
+2. Usa el formato [Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ## 🤝 Contribuir
 ¡Aceptamos contribuciones! Sigue estos pasos:
