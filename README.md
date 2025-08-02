@@ -1,5 +1,14 @@
 # 🔥 Red Team Táctics (TTPs) - MITRE ATT&CK Edition
 
+**`Redteam-tácticos-byCK`** es un repositorio colaborativo con técnicas avanzadas de Red Team alineadas a MITRE ATT&CK. Incluye:  
+🔹 TTPs detalladas (Phishing, Lateral Movement, EDR Evasion)  
+🔹 Scripts listos para usar (PowerShell, Python)  
+🔹 Laboratorios prácticos y cheatsheets  
+🔹 Enfoque en ética y pruebas autorizadas  
+
+*"Para profesionales que buscan aprender ofensiva realista, no solo teoría."*  
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blue.svg)](https://github.com/yourusername/RedTeam-Tactics/pulls)
