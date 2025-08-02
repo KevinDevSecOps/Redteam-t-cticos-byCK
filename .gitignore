@@ -1,0 +1,28 @@
+cat <<EOF > .gitignore
+# Archivos de sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales/IDE
+.venv/
+.vscode/
+.idea/
+
+# Archivos temporales/ejecutables
+*.exe
+*.dll
+*.bin
+*.pyc
+__pycache__/
+
+# Logs y datos sensibles
+*.log
+*.env
+*.key
+*.pem
+*.secret
+
+# Documentos de Office temporales
+~$*.docx
+~$*.xlsx
+EOF
