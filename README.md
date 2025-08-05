@@ -98,3 +98,25 @@ Este proyecto está bajo licencia **MIT**.
 - Vincula tus redes sociales o blog en el footer.
 
 ¿Necesitas ayuda para adaptar algo en específico? ¡Avísame! 🚀
+
+```markdown
+# 🔥 Red Team Tactics (PowerShell Edition)
+
+Colección de scripts para operaciones ofensivas en entornos Windows.
+
+## 🛠️ Uso Rápido
+```powershell
+# Importar módulo de Slack (configurar webhook primero)
+Import-Module ./Modules/Slack-Notifications.psm1
+Send-SlackAlert -Message "Script ejecutado en $env:COMPUTERNAME"
+
+# Ejecutar técnica de persistencia
+.\Persistence\WMI-Event-Subscription.ps1
+```
+
+## 📌 Requisitos
+- PowerShell 5.1+ (con ExecutionPolicy `Bypass`).
+- Módulos: `Slack-Notifications.psm1` requiere `Invoke-RestMethod`.
+
+> ⚠️ **Legal**: Solo para pruebas autorizadas. Revisa [DISCLAIMER.md](./Legal/DISCLAIMER.md).
+```
