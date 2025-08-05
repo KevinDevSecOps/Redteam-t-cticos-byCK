@@ -19,3 +19,8 @@ function Send-SlackAlert {
 }
 
 Export-ModuleMember -Function Send-SlackAlert
+
+Uso en otros sxript:
+
+Import-Module ../Modules/Slack-Notifications.psm1
+Send-SlackAlert -Message "AMSI bypassed on $env:COMPUTERNAME"
