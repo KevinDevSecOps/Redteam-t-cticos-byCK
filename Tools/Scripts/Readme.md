@@ -39,3 +39,21 @@ python3 automate_phishing.py
 - [ ] Crear un script de escaneo de puertos con Python.  
 
 ¡Dime y lo implementamos! 🚀
+
+# 🧰 Scripts de Automatización para Red Team
+
+## Categorías
+| Script                      | Descripción                               | Requisitos           |
+|-----------------------------|-------------------------------------------|----------------------|
+| `Process-Injector.ps1`      | Inyección de shellcode en procesos        | PowerShell 5.1+      |
+| `Domain-Hunter.py`          | Enumeración de Active Directory           | Python 3 + Impacket  |
+| `Cloud-Credential-Scanner.sh` | Detección de credenciales en repositorios | Bash + grep          |
+
+## 🚀 Cómo Contribuir
+1. Asegúrate que los scripts incluyan:
+   - Cabecera con descripción.
+   - Manejo básico de errores.
+   - Ejemplos de uso.
+2. Usa el estándar de nombres: `[Tecnica]-[Lenguaje].[ext]`.
+
+> ⚠️ **Legal**: Todos los scripts deben usarse solo con autorización.
