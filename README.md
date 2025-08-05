@@ -8,6 +8,7 @@
 
 *"Para profesionales que buscan aprender ofensiva realista, no solo teoría."*  
 
+Hecho con ❤ por KevinDevSecOps
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
